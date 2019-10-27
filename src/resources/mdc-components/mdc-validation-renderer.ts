@@ -37,7 +37,7 @@ export class MdcValidationRenderer implements ValidationRenderer {
     const selectElement = element.closest('.mdc-select');
 
     if (selectElement) {
-      textFieldElement.classList.add('mdc-select--invalid');
+      selectElement.classList.add('mdc-select--invalid');
       return;
     }
 

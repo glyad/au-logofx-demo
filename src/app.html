@@ -2,7 +2,7 @@
     <require from="./resources/css/custom.scss"></require>
     
     <!-- <require from="material-components-web/material-components-web.scss"></require> -->
-    <!-- <require from='./resources/mdc-components/mdc-hook'></require> -->
+    
 
   <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open" style="position: fixed">
     <div class="mdc-drawer__header">
@@ -12,30 +12,10 @@
     </div>
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
-
           <a repeat.for="nav of router.navigation" class="mdc-list-item ${nav.isActive ? 'mdc-list-item--activated' : ''}"  href.bind="nav.href" aria-current="page">
             <i class="material-icons mdc-list-item__graphic" aria-hidden="true">${nav.settings.icon}</i>
             <span class="mdc-list-item__text">${nav.title}</span>
           </a>
-
-<!--
-
-        <a class="mdc-list-item ${router.navigation[0].isActive ? 'mdc-list-item--activated' : ''}"  route-href="route:  home" aria-current="page">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
-          <span class="mdc-list-item__text">Home</span>
-        </a>
-        <a class="mdc-list-item ${router.navigation[1].isActive ? 'mdc-list-item--activated' : ''}" route-href="route: buttons">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-          <span class="mdc-list-item__text">Buttons</span>
-        </a>
-        <a class="mdc-list-item ${router.navigation[2].isActive ? 'mdc-list-item--activated' : ''}" route-href="route: login">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">lock</i>
-          <span class="mdc-list-item__text">Login</span>
-        </a>
-        <a class="mdc-list-item ${router.navigation[3].isActive ? 'mdc-list-item--activated' : ''}" route-href="route: form">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">account_balance</i>
-          <span class="mdc-list-item__text">Forms</span>
-        </a> -->
       </nav>
     </div>
   </aside>

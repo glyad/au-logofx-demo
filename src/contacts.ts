@@ -87,9 +87,6 @@ export class Contacts {
       return false;
     const checkbox = new MDCCheckbox(document.querySelector('#selectionStateCheckbox'));
 
-    const vmLength = this.contacts.length;
-    const selectedLength = this.contacts.getSelectedItems().length;
-
     if ((this.contacts.length > this.contacts.getSelectedItems().length)
           && (this.contacts.getSelectedItems().length > 0)) {
             checkbox.indeterminate = true;
