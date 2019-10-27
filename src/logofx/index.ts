@@ -3,7 +3,7 @@ import * as __utils__ from './utils';
 
 export { __utils__ as utils };
 export * from './model/model';
-export * from './Core';
+export * from './core';
 export * from './view-model';
 export * from './logging';
 export * from './ui-services';

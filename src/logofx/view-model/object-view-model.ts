@@ -24,8 +24,25 @@ export abstract class ObjectViewModel<T extends IModel<any>> implements IObjectV
   public model: T;
   public validationController: ValidationController;
 
+  private _isBusy: boolean = false;
   private _isSelected: boolean = false;
   private _isEnabled: boolean = true;
+
+  // tslint:disable-next-line: no-empty
+  protected isBusyChanged(value: boolean): void {  }
+
+  public get isBusy(): boolean {
+    return this._isBusy;
+  }
+
+  public set isBusy(value: boolean) {
+    if (this._isBusy === value) {
+      return;
+    }
+
+    this._isBusy = value;
+    this.isBusyChanged(value);
+  }
 
   public get isSelected(): boolean {
       return this._isSelected;
@@ -55,5 +72,4 @@ export abstract class ObjectViewModel<T extends IModel<any>> implements IObjectV
     this.validationController = Container.instance.get(ValidationController);
     this.validationController.changeTrigger(validateTrigger.changeOrBlur);
   }
-
 }

@@ -2,13 +2,14 @@ import { ObserverLocator } from 'aurelia-binding';
 import { Container, BindingEngine } from 'aurelia-framework';
 
 export * from './guid';
+export * from './collections';
 
 export function getDefaultBindingEngine(): BindingEngine {
-    return <BindingEngine>Container.instance.get(BindingEngine);
+    return Container.instance.get<BindingEngine>(BindingEngine);
 }
 
 export function getDefaultObserverLocator(): ObserverLocator {
-    return <ObserverLocator>Container.instance.get(ObserverLocator);
+    return Container.instance.get<ObserverLocator>(ObserverLocator);
 }
 
 declare global {

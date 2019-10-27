@@ -1,15 +1,11 @@
 // tslint:disable: member-ordering
 import { IEditableModel } from 'logofx/model';
-import { jsonClone } from 'logofx/utils';
-import { ObjectViewModel } from './objectViewModel';
-import { ValidationControllerFactory } from 'aurelia-validation';
-import { Container } from 'aurelia-framework';
+import { ObjectViewModel } from './object-view-model';
 
 /**
  * EditableObjectViewModel
  */
 export abstract class EditableObjectViewModel<T extends IEditableModel<any>> extends ObjectViewModel<T> {
-    private originalModel: T;
 
     // tslint:disable: no-parameter-properties
     constructor(model: T) {
