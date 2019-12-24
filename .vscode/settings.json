@@ -4,5 +4,16 @@
   "html.suggest.ionic": false,
   "workbench.colorCustomizations": {
     "tab.unfocusedActiveBorder": "#fff0"
-  }
+  },
+  "cSpell.words": [
+    "Kossoglyad",
+    "automapper",
+    "cherow",
+    "instrumenter",
+    "logofx",
+    "logoui",
+    "polyfill",
+    "roboto",
+    "webfont"
+  ]
 }
