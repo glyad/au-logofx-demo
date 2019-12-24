@@ -31,7 +31,9 @@ const cssRules = [
 const scssRules1 = [{
     loader: 'style-loader',
     options: {
-      includePaths: ['./node_modules' , './src/resources/css' ]
+      sassOptions: {
+        includePaths: ['./node_modules' , './src/resources/css' ]
+      }
   }
 }, {
     loader: 'css-loader',
@@ -41,7 +43,9 @@ const scssRules1 = [{
 }, {
     loader: 'sass-loader',
     options: {
+      sassOptions: {
         includePaths: ['./node_modules' , './src/resources/css' ]
+      }
     }
 }];
 const scssRules2 = [{
@@ -49,7 +53,9 @@ const scssRules2 = [{
 }, {
     loader: 'sass-loader',
     options: {
+      sassOptions: {
         includePaths: ['./node_modules' , './src/resources/css' ]
+      }
     }
 }];
 
