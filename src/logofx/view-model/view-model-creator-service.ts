@@ -13,8 +13,10 @@ export class ViewModelCreatorService implements IViewModelCreatorService {
         const instance: T = <T>Container.instance.get(type);
 
         if (rest.length > 0) {
+          // tslint:disable-next-line: no-string-literal
           instance["model"] = rest[0];
           if (rest.length > 1) {
+            // tslint:disable-next-line: no-string-literal
             instance["navigationService"] = rest[1];
           }
         }
