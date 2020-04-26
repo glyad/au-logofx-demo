@@ -20,17 +20,6 @@ export interface IObjectViewModel<T extends IModel<any>> extends IObjectWrapper<
  */
 export abstract class ObjectViewModel<T extends IModel<any>> implements IObjectViewModel<T> {
 
-  @bindable()
-  public model: T;
-  public validationController: ValidationController;
-
-  private _isBusy: boolean = false;
-  private _isSelected: boolean = false;
-  private _isEnabled: boolean = true;
-
-  // tslint:disable-next-line: no-empty
-  protected isBusyChanged(value: boolean): void {  }
-
   public get isBusy(): boolean {
     return this._isBusy;
   }
@@ -66,10 +55,21 @@ export abstract class ObjectViewModel<T extends IModel<any>> implements IObjectV
       this._isEnabled = value;
   }
 
+  @bindable()
+  public model: T;
+  public validationController: ValidationController;
+
+  private _isBusy: boolean = false;
+  private _isSelected: boolean = false;
+  private _isEnabled: boolean = true;
+
   constructor(model: T) {
     this.model = model;
 
     this.validationController = Container.instance.get(ValidationController);
     this.validationController.changeTrigger(validateTrigger.changeOrBlur);
   }
+
+  // tslint:disable-next-line: no-empty
+  protected isBusyChanged(value: boolean): void {  }
 }
