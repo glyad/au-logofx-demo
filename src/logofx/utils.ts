@@ -6,9 +6,9 @@ export function clear<T>(array: T[]): T[] {
 export function jsonClone(source: any): any {
   const seen = [];
 
-  const json = JSON.stringify(source, function(key, val) {
+  const json = JSON.stringify(source, (key, val) => {
 
-    if (val != null && typeof val == "object") {
+    if (val != null && typeof val === "object") {
         if (seen.indexOf(val) >= 0) {
             return;
         }
@@ -19,9 +19,7 @@ export function jsonClone(source: any): any {
 
   });
 
-  const temp = JSON.parse(json);
-
-  return temp;
+  return JSON.parse(json);
 }
 
 export function spreadClone(source: any): any {
@@ -61,4 +59,3 @@ export function deepClone(obj: any): any {
 
     throw new Error("Unable to copy obj! Its type isn't supported.");
 }
-
