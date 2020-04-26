@@ -34,7 +34,7 @@ export class WrappingCollection extends Array {
 
         Core.getDefaultObserverLocator()
             .getArrayObserver(this._source)
-            .subscribe('clbk', this.onSubscribe);
+            .subscribe('callback', this.onSubscribe);
 
         for (const item of this._source) {
             this.pushCore(item, WrappingCollection.createWrapper(item, this.factoryMethod));
@@ -90,11 +90,11 @@ export class WrappingCollection extends Array {
     }
 
     protected bind(bindingContext: Object, overrideContext: Object): void {
-        console.log('WrappingCollection.bimd called.');
+        console.log('WrappingCollection.bind called.');
     }
 
     protected unbind(): void {
-        console.log('WrappingCollection.unbiind called.');
+        console.log('WrappingCollection.unbind called.');
     }
 
     private pushCore: (model: any, wrapped: any) => void = (model: any, wrapped: any) => {
@@ -146,7 +146,7 @@ export class WrappingCollection extends Array {
         }
     }
 
-    private clbk(changes: any): void {
+    private callback(changes: any): void {
         console.log(`CHANGES 2:  ${typeof changes}`);
     }
 }
