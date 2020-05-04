@@ -349,3 +349,6 @@ healthchecksdb
 MigrationBackup/
 
 __node_modules__/
+
+dist
+.chrome
