@@ -41,12 +41,12 @@ export function configure(aurelia: Aurelia): void {
       configuration.settings.startingZIndex = 10;
       configuration.settings.keyboard = true;
     })
+    .plugin(PLATFORM.moduleName('@logofx/aurelia-mvvm-plugin'))
     // .plugin(PLATFORM.moduleName('resources/aurelia-router-metadata'), (settings: RouterMetadataSettings) => {
     //   settings.routerConfiguration.title = "Foo";
     //   settings.enableStaticAnalysis = true;
     //   settings.enableEagerLoading = true;
     // })
-    .feature(PLATFORM.moduleName('logofx/index'))
     .feature(PLATFORM.moduleName('model/index'))
     .feature(PLATFORM.moduleName('data/index'))
     .feature(PLATFORM.moduleName('resources/index'));

@@ -1,4 +1,4 @@
-import { EditableModel } from 'logofx';
+import { EditableModel } from '@logofx/aurelia-mvvm-plugin';
 import { ICompany } from 'model/contracts';
 import { ValidationRules } from 'aurelia-validation';
 

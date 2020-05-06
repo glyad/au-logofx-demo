@@ -3,7 +3,7 @@
 
 import { Validator, validateTrigger, ValidationRules, ValidationControllerFactory, ValidationController } from 'aurelia-validation';
 import { DialogService } from 'aurelia-dialog';
-import { EditableObjectViewModel } from 'logofx';
+import { EditableObjectViewModel } from '@logofx/aurelia-mvvm-plugin';
 import { Contact as ContactModel, DataService } from 'model';
 import { autoinject, transient, Container } from 'aurelia-framework';
 import { MdcValidationRenderer } from 'resources/mdc-components';

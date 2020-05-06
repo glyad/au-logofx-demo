@@ -1,6 +1,6 @@
 import { ContactDto, ContactProvider, CompanyDto, CompanyProvider } from 'data';
 import { IDataService, ICompany, Company, IContact, Contact } from 'model';
-import { Guid } from 'logofx';
+import { Guid } from '@logofx/aurelia-mvvm-plugin';
 import { autoinject } from 'aurelia-framework';
 
 /**

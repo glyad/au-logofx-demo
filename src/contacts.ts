@@ -1,4 +1,4 @@
-import { WrappingCollection, ViewModelCreatorService, WindowManager } from 'logofx';
+import { WrappingCollection, ViewModelCreatorService, WindowManager } from '@logofx/aurelia-mvvm-plugin';
 import { Contact as ContactViewModel } from './contact';
 import { Contact, DataService } from 'model';
 import { autoinject, transient, View } from "aurelia-framework";

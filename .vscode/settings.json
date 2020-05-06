@@ -12,6 +12,7 @@
     "instrumenter",
     "logofx",
     "logoui",
+    "mvvm",
     "polyfill",
     "roboto",
     "webfont"
