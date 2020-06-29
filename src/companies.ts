@@ -1,4 +1,4 @@
-import { ViewModelCreatorService } from 'logofx';
+import { ViewModelCreatorService } from '@logofx/aurelia-mvvm-plugin';
 import { DataService } from 'model';
 import { transient, autoinject } from 'aurelia-framework';
 

@@ -1,5 +1,4 @@
-import { IModel, IEditableModel } from 'logofx/Model';
-import { EnumDeclaration } from 'typescript';
+import { IEditableModel } from '@logofx/aurelia-mvvm-plugin';
 
 export interface IContact extends IEditableModel<string> {
   firstName: string;

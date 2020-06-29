@@ -16,5 +16,6 @@
     "polyfill",
     "roboto",
     "webfont"
-  ]
+  ],
+  "liveServer.settings.port": 5503
 }
