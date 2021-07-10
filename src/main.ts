@@ -9,7 +9,7 @@ const hook: MDCHook = new MDCHook();
 
 // tslint:disable: no-invalid-this
 Controller.prototype.attached = function(): void {
-      console.log('before attached');
+      //console.log('before attached');
       if (this.isAttached) {
         return;
       }
@@ -24,7 +24,7 @@ Controller.prototype.attached = function(): void {
         this.view.attached();
         hook.beforeBind(this.view);
       }
-      console.log('after attached');
+      //console.log('after attached');
     };
     // tslint:enable: no-invalid-this
 
@@ -42,16 +42,7 @@ export function configure(aurelia: Aurelia): void {
       configuration.settings.keyboard = true;
     })
     .plugin(PLATFORM.moduleName('@logofx/aurelia-mvvm-plugin'))
-    // .plugin(PLATFORM.moduleName('resources/aurelia-router-metadata'), (settings: RouterMetadataSettings) => {
-    //   settings.routerConfiguration.title = "Foo";
-    //   settings.enableStaticAnalysis = true;
-    //   settings.enableEagerLoading = true;
-    // })
-    .feature(PLATFORM.moduleName('model/index'))
-    .feature(PLATFORM.moduleName('data/index'))
-    .feature(PLATFORM.moduleName('resources/index'));
-
-  aurelia.use.plugin(PLATFORM.moduleName('aurelia-i18n'), (instance) => {
+    .plugin(PLATFORM.moduleName('aurelia-i18n'), (instance) => {
       const aliases = ['t', 'i18n'];
       TCustomAttribute.configureAliases(aliases);
       instance.i18next.use(Backend.with(aurelia.loader));
@@ -68,7 +59,34 @@ export function configure(aurelia: Aurelia): void {
         load : "currentOnly",
         debug : true
       });
-   });
+    })
+    // .plugin(PLATFORM.moduleName('resources/aurelia-router-metadata'), (settings: RouterMetadataSettings) => {
+    //   settings.routerConfiguration.title = "Foo";
+    //   settings.enableStaticAnalysis = true;
+    //   settings.enableEagerLoading = true;
+    // })
+    .feature(PLATFORM.moduleName('model/index'))
+    .feature(PLATFORM.moduleName('data/index'))
+    .feature(PLATFORM.moduleName('resources/index'));
+
+  // aurelia.use.plugin(PLATFORM.moduleName('aurelia-i18n'), (instance) => {
+  //     const aliases = ['t', 'i18n'];
+  //     TCustomAttribute.configureAliases(aliases);
+  //     instance.i18next.use(Backend.with(aurelia.loader));
+  //     // adapt options to your needs (see http://i18next.com/docs/options/)
+  //     // make sure to return the promise of the setup method, in order to guarantee proper loading
+  //     return instance.setup({
+  //       backend: {                                  // <-- configure backend settings
+  //         loadPath: 'locales/{{lng}}/{{ns}}.json', // <-- XHR settings for where to get the files from
+  //       },
+  //       attributes: aliases,
+  //       parseMissingKeyHandler : (key: string): string => `The key \"${key}\" is missing.`,
+  //       lng : 'ru',
+  //       fallbackLng : 'en',
+  //       load : "currentOnly",
+  //       debug : true
+  //     });
+  //  });
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
 

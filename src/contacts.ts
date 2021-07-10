@@ -35,6 +35,7 @@ export class Contacts {
     this._drawer = MDCDrawer.attachTo(document.querySelector('#right-drawer'));
   }
 
+  // tslint:disable: member-ordering
   public get contacts(): WrappingCollection {
     if (this._wcContacts !== undefined) {
       return this._wcContacts.sort((leftSide: ContactViewModel, rightSide: ContactViewModel): number => {

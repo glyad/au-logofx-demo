@@ -15,7 +15,9 @@
     "mvvm",
     "polyfill",
     "roboto",
+    "voca",
     "webfont"
   ],
-  "liveServer.settings.port": 5503
+  "liveServer.settings.port": 5503,
+  "i18next.i18nPaths": "/Users/david/temp/au-logofx-demo/src/locales"
 }

@@ -5,6 +5,14 @@
     "steoates.autoimport",
     "EditorConfig.EditorConfig",
     "christian-kohler.path-intellisense",
-    "behzad88.Aurelia"
+    "behzad88.Aurelia",
+    "streetsidesoftware.code-spell-checker",
+    "GitHub.vscode-pull-request-github",
+    "KnisterPeter.vscode-github",
+    "eamodio.gitlens",
+    "donjayamanne.githistory",
+    "fabiospampinato.vscode-open-in-github",
+    "piotrpalarz.vscode-gitignore-generator",
+    "christian-kohler.npm-intellisense"
   ]
 }

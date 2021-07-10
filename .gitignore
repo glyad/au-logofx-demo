@@ -353,3 +353,4 @@ __node_modules__/
 dist
 .chrome
 docs
+.history

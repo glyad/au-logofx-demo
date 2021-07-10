@@ -7,7 +7,16 @@
       "name": "Launch Chrome",
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "command": "au generate dto",
+      "name": "Run generate dto",
+      "request": "launch",
+      "type": "node-terminal",
+      "outFiles": [
+        "${workspaceFolder}/aurelia_project/**/*.js"
+      ],
+      "sourceMaps": true
     }
-
-     ]
+  ]
 }
