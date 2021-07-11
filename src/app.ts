@@ -26,7 +26,7 @@ export class App {
   }
 
   public attached(): void {
-    console.log('App - attached');
+    //console.log('App - attached');
 
     this.initMDC();
 
